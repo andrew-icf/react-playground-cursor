@@ -5,21 +5,21 @@
             "name": "John",
             "email": "john.doe@example.com",
             "phone": "1234567890",
-            "imageUrl": "../../assets/images/company.png"
+            "imageUrl": "/assets/images/company.png"
         },
         {
             "id": 2,
             "name": "Barb",
             "email": "barb.doe@example.com",
             "phone": "111119999",
-            "imageUrl": "../../assets/images/generic.png"
+            "imageUrl": "/assets/images/generic.png"
         },
         {
             "id": 3,
             "name": "Frank",
             "email": "frank.doe@example.com",
             "phone": "0000000000",
-            "imageUrl": "../../assets/images/wayne.png"
+            "imageUrl": "/assets/images/wayne.png"
         }
     ]
 }

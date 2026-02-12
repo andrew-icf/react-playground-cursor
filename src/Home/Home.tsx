@@ -18,6 +18,10 @@ const Home: React.FC = () => {
     setCount(count + 1);
   }
 
+  const renderedClients = clients.clients.map((client) => {
+    return <ClientCard {...client} key={client.id} />
+  })
+
   return (
     <div className="home-container">
       <header>
@@ -28,9 +32,18 @@ const Home: React.FC = () => {
         <p>You have successfully logged in.</p>
       </main>
       <div className="cards-container">
+        {/* Iterate by mapping within JSX */}
+      {/* { clients.clients.map((client) => (
+        <ClientCard key={client.id} {...client} />
+      )) } */}
+
+      {/* Not so pretty 
       <ClientCard {...clients.clients[0]}/>
       <ClientCard {...clients.clients[1]}/>
-      <ClientCard {...clients.clients[2]}/>
+      <ClientCard {...clients.clients[2]}/> */}
+
+      {/* Clean, as the code is stored in a variable */}
+      { renderedClients }
       </div>
       <div>
         <button onClick={handleAddClient}>Add a Client</button>
