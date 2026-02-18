@@ -4,19 +4,22 @@
             "id": 1,
             "name": "John",
             "email": "john.doe@example.com",
-            "phone": "1234567890"
+            "phone": "1234567890",
+            "imageUrl": "/assets/images/company.png"
         },
         {
             "id": 2,
             "name": "Barb",
-            "email": "jane.doe@example.com",
-            "phone": "111119999"
+            "email": "barb.doe@example.com",
+            "phone": "111119999",
+            "imageUrl": "/assets/images/generic.png"
         },
         {
             "id": 3,
             "name": "Frank",
-            "email": "jim.doe@example.com",
-            "phone": "0000000000"
+            "email": "frank.doe@example.com",
+            "phone": "0000000000",
+            "imageUrl": "/assets/images/wayne.png"
         }
     ]
 }

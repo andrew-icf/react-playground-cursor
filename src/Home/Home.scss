@@ -38,4 +38,12 @@
     gap: 16px;
     margin-top: 32px;
     align-items: stretch; // all cards same height
+    width: 100%;
+    padding: 0 2rem;
+
+    // Make each card take equal width
+    > * {
+      flex: 1; // Each card grows equally
+      min-width: 0; // Prevent overflow
+    }
   }
