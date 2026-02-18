@@ -1,13 +1,20 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ClientCard from './ClientCard/ClientCard';
 import clients from '../../assets/data/clients.json';
 import './Home.scss';
+import { Client } from './models';
+import SearchBar from './SearchBar/SearchBar';
+import ImageList from './ImageList/ImageList';
+import searchImages from '../unsplash.api.service';
+
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
   const numberOfClients = clients.clients.length
   const [count, setCount] = useState<number>(numberOfClients)
+  const [imageSearch, setImageSearch] = useState([])
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
@@ -17,8 +24,13 @@ const Home: React.FC = () => {
   const handleAddClient = () => { 
     setCount(count + 1);
   }
+  
+  const searchBarSubmit = async (term: string) => {
+    const searchResult = await searchImages(term);
+    setImageSearch(searchResult);
+  }
 
-  const renderedClients = clients.clients.map((client) => {
+  const renderedClients = clients.clients.map((client: Client) => {
     return <ClientCard {...client} key={client.id} />
   })
 
@@ -48,6 +60,12 @@ const Home: React.FC = () => {
       <div>
         <button onClick={handleAddClient}>Add a Client</button>
         <p>Client count {count}.</p>
+      </div>
+      <div>
+        <SearchBar onSearchSubmit={searchBarSubmit} />
+      </div>
+      <div>
+        <ImageList imageSearch={ imageSearch } />
       </div>
     </div>
   );
