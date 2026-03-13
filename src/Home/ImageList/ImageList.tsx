@@ -2,6 +2,7 @@ import './ImageList.scss';
 import ImageDetail from '../ImageDetail/ImageDetail'
 
 const ImageList = ({imageSearch} : any) => {
+    console.log('imageSearch', imageSearch);
     const renderedImages = imageSearch.map((image: any) => {
         return (
             <div key={image.id}>
