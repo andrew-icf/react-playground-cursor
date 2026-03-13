@@ -8,6 +8,7 @@ import { Client } from './models';
 import SearchBar from './SearchBar/SearchBar';
 import ImageList from './ImageList/ImageList';
 import searchImages from '../unsplash.api.service';
+import ReadingList from './ReadingList/ReadingList';
 
 
 const Home: React.FC = () => {
@@ -66,6 +67,9 @@ const Home: React.FC = () => {
       </div>
       <div>
         <ImageList imageSearch={ imageSearch } />
+      </div>
+      <div>
+        <ReadingList />
       </div>
     </div>
   );

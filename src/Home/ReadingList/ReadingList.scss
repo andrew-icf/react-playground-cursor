@@ -1,0 +1,20 @@
+.book-card {
+    flex: 1;               // evenly spaced
+    max-width: 260px;      // keeps them skinny
+    min-height: 420px;     // makes them tall
+    padding: 16px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+  }
