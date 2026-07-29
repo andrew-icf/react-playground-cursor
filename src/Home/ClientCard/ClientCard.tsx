@@ -4,7 +4,7 @@ import './ClientCard.scss';
 const ClientCard = ({ name, email, phone, imageUrl }: Client) => {
   
   return (
-    <div>
+    <div className="client-card-wrapper">
       <h1>Client Card</h1>
         <div className="client-card">
             <p>{ name }</p>

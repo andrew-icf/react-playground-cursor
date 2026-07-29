@@ -1,5 +1,14 @@
-.client-card {
-    flex: 1;               // evenly spaced
+.client-card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .client-card {
+    width: 100%;
     max-width: 260px;      // keeps them skinny
     min-height: 420px;     // makes them tall
     padding: 16px;
